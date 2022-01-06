@@ -1,0 +1,654 @@
+{
+    "infected": 1666545,
+    "recovered": 1259614,
+    "treated": 7636,
+    "died": 31418,
+    "infectedToday": 14872,
+    "recoveredToday": 11374,
+    "treatedToday": 54,
+    "diedToday": 204,
+    "overview": [
+        {
+            "date": "21-12",
+            "death": 250,
+            "treating": 125,
+            "cases": 16325,
+            "recovered": 50191,
+            "avgCases7day": 15870,
+            "avgRecovered7day": 21388,
+            "avgDeath7day": 232
+        },
+        {
+            "date": "22-12",
+            "death": 210,
+            "treating": 447,
+            "cases": 16555,
+            "recovered": 13394,
+            "avgCases7day": 15870,
+            "avgRecovered7day": 21388,
+            "avgDeath7day": 232
+        },
+        {
+            "date": "23-12",
+            "death": 280,
+            "treating": -694,
+            "cases": 16377,
+            "recovered": 10944,
+            "avgCases7day": 15870,
+            "avgRecovered7day": 21388,
+            "avgDeath7day": 232
+        },
+        {
+            "date": "24-12",
+            "death": 235,
+            "treating": 274,
+            "cases": 16157,
+            "recovered": 30833,
+            "avgCases7day": 15870,
+            "avgRecovered7day": 21388,
+            "avgDeath7day": 232
+        },
+        {
+            "date": "25-12",
+            "death": 241,
+            "treating": -5,
+            "cases": 15586,
+            "recovered": 14423,
+            "avgCases7day": 15870,
+            "avgRecovered7day": 21388,
+            "avgDeath7day": 232
+        },
+        {
+            "date": "26-12",
+            "death": 207,
+            "treating": -180,
+            "cases": 15218,
+            "recovered": 18556,
+            "avgCases7day": 15870,
+            "avgRecovered7day": 21388,
+            "avgDeath7day": 232
+        },
+        {
+            "date": "27-12",
+            "death": 204,
+            "treating": 54,
+            "cases": 14872,
+            "recovered": 11374,
+            "avgCases7day": 15870,
+            "avgRecovered7day": 21388,
+            "avgDeath7day": 232
+        }
+    ],
+    "locations": [
+        {
+            "name": "TP. Hồ Chí Minh",
+            "death": 19389,
+            "treating": 0,
+            "cases": 501258,
+            "recovered": 0,
+            "casesToday": 560,
+            "abbr": "HCM"
+        },
+        {
+            "name": "Bình Dương",
+            "death": 3201,
+            "treating": 0,
+            "cases": 290285,
+            "recovered": 0,
+            "casesToday": 77,
+            "abbr": "BD"
+        },
+        {
+            "name": "Đồng Nai",
+            "death": 1313,
+            "treating": 0,
+            "cases": 97081,
+            "recovered": 0,
+            "casesToday": 216,
+            "abbr": "ĐN"
+        },
+        {
+            "name": "Tây Ninh",
+            "death": 623,
+            "treating": 0,
+            "cases": 72183,
+            "recovered": 0,
+            "casesToday": 943,
+            "abbr": "TN"
+        },
+        {
+            "name": "Đồng Tháp",
+            "death": 525,
+            "treating": 0,
+            "cases": 41872,
+            "recovered": 0,
+            "casesToday": 701,
+            "abbr": "ĐT"
+        },
+        {
+            "name": "Long An",
+            "death": 869,
+            "treating": 0,
+            "cases": 40181,
+            "recovered": 0,
+            "casesToday": 45,
+            "abbr": "LA"
+        },
+        {
+            "name": "Cần Thơ",
+            "death": 543,
+            "treating": 0,
+            "cases": 39422,
+            "recovered": 0,
+            "casesToday": 711,
+            "abbr": "CT"
+        },
+        {
+            "name": "Hà Nội",
+            "death": 98,
+            "treating": 0,
+            "cases": 38726,
+            "recovered": 0,
+            "casesToday": 1948,
+            "abbr": "HN"
+        },
+        {
+            "name": "Tiền Giang",
+            "death": 899,
+            "treating": 0,
+            "cases": 32880,
+            "recovered": 0,
+            "casesToday": 134,
+            "abbr": "TG"
+        },
+        {
+            "name": "Cà Mau",
+            "death": 141,
+            "treating": 0,
+            "cases": 32499,
+            "recovered": 0,
+            "casesToday": 433,
+            "abbr": "CM"
+        },
+        {
+            "name": "An Giang",
+            "death": 904,
+            "treating": 0,
+            "cases": 31648,
+            "recovered": 0,
+            "casesToday": 213,
+            "abbr": "AG"
+        },
+        {
+            "name": "Khánh Hòa",
+            "death": 161,
+            "treating": 0,
+            "cases": 30033,
+            "recovered": 0,
+            "casesToday": 791,
+            "abbr": "KH"
+        },
+        {
+            "name": "Sóc Trăng",
+            "death": 302,
+            "treating": 0,
+            "cases": 29153,
+            "recovered": 0,
+            "casesToday": 223,
+            "abbr": "ST"
+        },
+        {
+            "name": "Kiên Giang",
+            "death": 489,
+            "treating": 0,
+            "cases": 29097,
+            "recovered": 0,
+            "casesToday": 204,
+            "abbr": "KG"
+        },
+        {
+            "name": "Vĩnh Long",
+            "death": 295,
+            "treating": 0,
+            "cases": 28643,
+            "recovered": 0,
+            "casesToday": 892,
+            "abbr": "VL"
+        },
+        {
+            "name": "Bạc Liêu",
+            "death": 242,
+            "treating": 0,
+            "cases": 27606,
+            "recovered": 0,
+            "casesToday": 595,
+            "abbr": "BL"
+        },
+        {
+            "name": "Bà Rịa – Vũng Tàu",
+            "death": 148,
+            "treating": 0,
+            "cases": 26168,
+            "recovered": 0,
+            "casesToday": 162,
+            "abbr": "BV"
+        },
+        {
+            "name": "Bến Tre",
+            "death": 163,
+            "treating": 0,
+            "cases": 25103,
+            "recovered": 0,
+            "casesToday": 281,
+            "abbr": "BT"
+        },
+        {
+            "name": "Bình Thuận",
+            "death": 271,
+            "treating": 0,
+            "cases": 24970,
+            "recovered": 0,
+            "casesToday": 140,
+            "abbr": "BTh"
+        },
+        {
+            "name": "Bình Phước",
+            "death": 52,
+            "treating": 0,
+            "cases": 20230,
+            "recovered": 0,
+            "casesToday": 30,
+            "abbr": "BP"
+        },
+        {
+            "name": "Trà Vinh",
+            "death": 117,
+            "treating": 0,
+            "cases": 19343,
+            "recovered": 0,
+            "casesToday": 544,
+            "abbr": "TV"
+        },
+        {
+            "name": "Bình Định",
+            "death": 55,
+            "treating": 0,
+            "cases": 13858,
+            "recovered": 0,
+            "casesToday": 501,
+            "abbr": "BĐ"
+        },
+        {
+            "name": "Thừa Thiên Huế",
+            "death": 12,
+            "treating": 0,
+            "cases": 11752,
+            "recovered": 0,
+            "casesToday": 381,
+            "abbr": "TTH"
+        },
+        {
+            "name": "Hậu Giang",
+            "death": 38,
+            "treating": 0,
+            "cases": 11680,
+            "recovered": 0,
+            "casesToday": 63,
+            "abbr": "HGi"
+        },
+        {
+            "name": "Đà Nẵng",
+            "death": 108,
+            "treating": 0,
+            "cases": 11039,
+            "recovered": 0,
+            "casesToday": 86,
+            "abbr": "ĐNa"
+        },
+        {
+            "name": "Đắk Lắk",
+            "death": 63,
+            "treating": 0,
+            "cases": 11012,
+            "recovered": 0,
+            "casesToday": 134,
+            "abbr": "ĐL"
+        },
+        {
+            "name": "Bắc Ninh",
+            "death": 17,
+            "treating": 0,
+            "cases": 10240,
+            "recovered": 0,
+            "casesToday": 326,
+            "abbr": "BN"
+        },
+        {
+            "name": "Lâm Đồng",
+            "death": 24,
+            "treating": 0,
+            "cases": 7770,
+            "recovered": 0,
+            "casesToday": 263,
+            "abbr": "LĐ"
+        },
+        {
+            "name": "Bắc Giang",
+            "death": 14,
+            "treating": 0,
+            "cases": 7644,
+            "recovered": 0,
+            "casesToday": 40,
+            "abbr": "BG"
+        },
+        {
+            "name": "Nghệ An",
+            "death": 34,
+            "treating": 0,
+            "cases": 7455,
+            "recovered": 0,
+            "casesToday": 93,
+            "abbr": "NA"
+        },
+        {
+            "name": "Thanh Hóa",
+            "death": 13,
+            "treating": 0,
+            "cases": 7029,
+            "recovered": 0,
+            "casesToday": 249,
+            "abbr": "TH"
+        },
+        {
+            "name": "Hà Giang",
+            "death": 6,
+            "treating": 0,
+            "cases": 6669,
+            "recovered": 0,
+            "casesToday": 122,
+            "abbr": "HG"
+        },
+        {
+            "name": "Gia Lai",
+            "death": 15,
+            "treating": 0,
+            "cases": 6611,
+            "recovered": 0,
+            "casesToday": 136,
+            "abbr": "GL"
+        },
+        {
+            "name": "Hải Phòng",
+            "death": 7,
+            "treating": 0,
+            "cases": 6604,
+            "recovered": 0,
+            "casesToday": 931,
+            "abbr": "HP"
+        },
+        {
+            "name": "Phú Yên",
+            "death": 47,
+            "treating": 0,
+            "cases": 6161,
+            "recovered": 0,
+            "casesToday": 112,
+            "abbr": "PY"
+        },
+        {
+            "name": "Quảng Nam",
+            "death": 19,
+            "treating": 0,
+            "cases": 5550,
+            "recovered": 0,
+            "casesToday": 96,
+            "abbr": "QNa"
+        },
+        {
+            "name": "Ninh Thuận",
+            "death": 52,
+            "treating": 0,
+            "cases": 5506,
+            "recovered": 0,
+            "casesToday": 56,
+            "abbr": "NT"
+        },
+        {
+            "name": "Quảng Ngãi",
+            "death": 25,
+            "treating": 0,
+            "cases": 5167,
+            "recovered": 0,
+            "casesToday": 201,
+            "abbr": "QNg"
+        },
+        {
+            "name": "Đắk Nông",
+            "death": 13,
+            "treating": 0,
+            "cases": 4584,
+            "recovered": 0,
+            "casesToday": 98,
+            "abbr": "ĐN"
+        },
+        {
+            "name": "Hưng Yên",
+            "death": 2,
+            "treating": 0,
+            "cases": 4314,
+            "recovered": 0,
+            "casesToday": 234,
+            "abbr": "HY"
+        },
+        {
+            "name": "Quảng Bình",
+            "death": 8,
+            "treating": 0,
+            "cases": 3536,
+            "recovered": 0,
+            "casesToday": 14,
+            "abbr": "QB"
+        },
+        {
+            "name": "Nam Định",
+            "death": 2,
+            "treating": 0,
+            "cases": 3022,
+            "recovered": 0,
+            "casesToday": 78,
+            "abbr": "NĐ"
+        },
+        {
+            "name": "Hải Dương",
+            "death": 1,
+            "treating": 0,
+            "cases": 2937,
+            "recovered": 0,
+            "casesToday": 0,
+            "abbr": "HD"
+        },
+        {
+            "name": "Phú Thọ",
+            "death": 3,
+            "treating": 0,
+            "cases": 2840,
+            "recovered": 0,
+            "casesToday": 50,
+            "abbr": "PT"
+        },
+        {
+            "name": "Quảng Ninh",
+            "death": 1,
+            "treating": 0,
+            "cases": 2736,
+            "recovered": 0,
+            "casesToday": 103,
+            "abbr": "QN"
+        },
+        {
+            "name": "Vĩnh Phúc",
+            "death": 6,
+            "treating": 0,
+            "cases": 2638,
+            "recovered": 0,
+            "casesToday": 85,
+            "abbr": "VP"
+        },
+        {
+            "name": "Thái Bình",
+            "death": 0,
+            "treating": 0,
+            "cases": 2439,
+            "recovered": 0,
+            "casesToday": 42,
+            "abbr": "TB"
+        },
+        {
+            "name": "Hà Nam",
+            "death": 0,
+            "treating": 0,
+            "cases": 2085,
+            "recovered": 0,
+            "casesToday": 98,
+            "abbr": "HNa"
+        },
+        {
+            "name": "Quảng Trị",
+            "death": 4,
+            "treating": 0,
+            "cases": 1894,
+            "recovered": 0,
+            "casesToday": 53,
+            "abbr": "QT"
+        },
+        {
+            "name": "Hà Tĩnh",
+            "death": 5,
+            "treating": 0,
+            "cases": 1572,
+            "recovered": 0,
+            "casesToday": 18,
+            "abbr": "HT"
+        },
+        {
+            "name": "Thái Nguyên",
+            "death": 1,
+            "treating": 0,
+            "cases": 1572,
+            "recovered": 0,
+            "casesToday": 59,
+            "abbr": "TNg"
+        },
+        {
+            "name": "Lạng Sơn",
+            "death": 5,
+            "treating": 0,
+            "cases": 1326,
+            "recovered": 0,
+            "casesToday": 0,
+            "abbr": "LS"
+        },
+        {
+            "name": "Hòa Bình",
+            "death": 3,
+            "treating": 0,
+            "cases": 1225,
+            "recovered": 0,
+            "casesToday": 45,
+            "abbr": "HB"
+        },
+        {
+            "name": "Tuyên Quang",
+            "death": 0,
+            "treating": 0,
+            "cases": 974,
+            "recovered": 0,
+            "casesToday": 28,
+            "abbr": "TQ"
+        },
+        {
+            "name": "Sơn La",
+            "death": 0,
+            "treating": 0,
+            "cases": 863,
+            "recovered": 0,
+            "casesToday": 126,
+            "abbr": "SL"
+        },
+        {
+            "name": "Kon Tum",
+            "death": 0,
+            "treating": 0,
+            "cases": 832,
+            "recovered": 0,
+            "casesToday": 24,
+            "abbr": "KT"
+        },
+        {
+            "name": "Điện Biên",
+            "death": 0,
+            "treating": 0,
+            "cases": 573,
+            "recovered": 0,
+            "casesToday": 9,
+            "abbr": "ĐB"
+        },
+        {
+            "name": "Yên Bái",
+            "death": 0,
+            "treating": 0,
+            "cases": 557,
+            "recovered": 0,
+            "casesToday": 21,
+            "abbr": "YB"
+        },
+        {
+            "name": "Ninh Bình",
+            "death": 0,
+            "treating": 0,
+            "cases": 525,
+            "recovered": 0,
+            "casesToday": 0,
+            "abbr": "NB"
+        },
+        {
+            "name": "Lào Cai",
+            "death": 0,
+            "treating": 0,
+            "cases": 425,
+            "recovered": 0,
+            "casesToday": 19,
+            "abbr": "LCa"
+        },
+        {
+            "name": "Cao Bằng",
+            "death": 1,
+            "treating": 0,
+            "cases": 411,
+            "recovered": 0,
+            "casesToday": 22,
+            "abbr": "CB"
+        },
+        {
+            "name": "Lai Châu",
+            "death": 0,
+            "treating": 0,
+            "cases": 85,
+            "recovered": 0,
+            "casesToday": 8,
+            "abbr": "LC"
+        },
+        {
+            "name": "Bắc Kạn",
+            "death": 0,
+            "treating": 0,
+            "cases": 50,
+            "recovered": 0,
+            "casesToday": 0,
+            "abbr": "BK"
+        }
+    ],
+    "sourceUrl": "https://static.pipezero.com/covid/data.json",
+    "lastUpdatedAtApify": "2021-12-27T16:06:00.000Z",
+    "readMe": "https://apify.com/dtrungtin/covid-vi"
+}
