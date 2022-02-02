@@ -4,7 +4,7 @@ from apify_client import ApifyClient
 import json
 import datetime
 import os
-import pyodbc
+# import pyodbc //use this lib if you want to store data in Microsoft SQL Server
 import tkinter as tk
 from unidecode import unidecode
 
@@ -12,6 +12,7 @@ SERVER_IP = "127.0.0.1"  # localhost, ip loopback: 127.0.0.1
 SERVER_PORT = 65000
 FORMAT = "utf-8"
 N_CLIENT = 0
+STATUS = "disconnected"
 LOCK = threading.Lock()
 USER_LOGGED = []
 
@@ -86,40 +87,39 @@ class App(tk.Tk):
         return True
 
     def accept_login(self, connect: socket.socket, username: str, password: str):
-        try:
-            self.cursor.execute("select password from UserAccount where username = ?", username)
-            export_password = self.cursor.fetchone()
-            if (password == export_password[0]):
-                if(self.is_accessible(username)):
-                    connect.send("ok".encode(FORMAT))
-                    return True
+        data = json.load(open("UserAccount.json", encoding="utf8"))
+        for user in data['users']:
+            if(user['username'] == username):
+                if (user['password'] == password):
+                    if(self.is_accessible(username)):
+                        connect.send("ok".encode(FORMAT))
+                        return True
+                    else:
+                        connect.send("User has already logged in".encode(FORMAT))
+                        return False
                 else:
-                    connect.send("User has already logged in".encode(FORMAT))
+                    connect.send("Wrong password".encode(FORMAT))
                     return False
-            else:
-                connect.send("Wrong password".encode(FORMAT))
-                return False
-        except:
-            connect.send("Username not found".encode(FORMAT))
-            return False
+        connect.send("Username not found".encode(FORMAT))
+        return False
 
     def accept_signup(self, connect: socket.socket, username: str, password: str):
-        try:
-            self.cursor.execute("select username from UserAccount")
-            export_username = self.cursor.fetchone()
-            while(export_username != None):
-                if(username == export_username[0]):
-                    connect.send("Username already exists".encode(FORMAT))
-                    return False
-                export_username = self.cursor.fetchone()
+        if(not os.path.exists("UserAccount.json")):
+            data = {}
+            data['users'] = []
+        else:
+            data = json.load(open("UserAccount.json", encoding="utf8"))
 
-            self.cursor.execute("insert UserAccount values (?, ?)", username, password)
-            self.conx.commit()
-            connect.send("Signed up successfully".encode(FORMAT))
-            return True
-        except:
-            connect.send("Sign up failed".encode(FORMAT))
-            return False
+        for user in data['users']:
+            if(user['username'] == username):
+                connect.send("Username has already existed".encode(FORMAT))
+                return False
+        data['users'].append({'username': username, 'password': password})
+        with open("UserAccount.json", 'w', encoding="utf8") as outfile:
+            json.dump(data, outfile, indent=4, ensure_ascii=False)
+
+        connect.send("Signed up successfully".encode(FORMAT))
+        return True
 
     def req_prov_info(self, connect: socket.socket, req: str):
         file_name = datetime.date.today().strftime("%Y-%m-%d") + '.json'
@@ -163,7 +163,7 @@ class App(tk.Tk):
                         USER_LOGGED.remove(client_name)
                     except:
                         pass
-                    self.list.insert(tk.END, client_name + " " + str(address) + " has disconnected")
+                    self.list.insert(tk.END, client_name + " " + str(address) + STATUS)
                     with LOCK:
                         N_CLIENT -= 1
                     connect.close()
@@ -203,10 +203,10 @@ class App(tk.Tk):
             except:
                 try:
                     USER_LOGGED.remove(client_name)
-                    self.list.insert(tk.END, client_name + " " + str(address) + " has disconnected")
+                    self.list.insert(tk.END, client_name + " " + str(address) + STATUS)
                 except:
                     if(client_name == ""):
-                        self.list.insert(tk.END, client_name + " " + str(address) + " has disconnected")
+                        self.list.insert(tk.END, client_name + " " + str(address) + STATUS)
                 with LOCK:
                     N_CLIENT -= 1
                 connect.close()
@@ -233,10 +233,7 @@ class App(tk.Tk):
         self.execute(server)
 
     def connect_database(self):
-        try:
-            self.conx = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=HOANGGIA;Database=UserAccount;UID=hoanggia;PWD=hoanggia')
-            self.cursor = self.conx.cursor()
-        except:
+        if not os.path.exists('UserAccount.json'):
             popup = tk.Toplevel(self)
             popup.title("Error")
             popup.geometry("300x100")
@@ -246,7 +243,6 @@ class App(tk.Tk):
             label_error.pack()
             button_ok.pack()
             self.server.close()
-            return
 
     def establish_connection(self, frame):
         popup = tk.Toplevel(self)
