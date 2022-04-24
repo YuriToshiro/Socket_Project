@@ -4,3 +4,11 @@
 1. Truong Cao Hoang Gia
 2. Le Trung Nguyen
 3. Huynh Phuc Hau
+```c++
+while(!Success)
+{
+  TryAgain()
+  if(Dead)
+    break;
+}
+```
